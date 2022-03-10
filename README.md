@@ -1,5 +1,21 @@
 # A Camunda Greenhouse, part 3
 
+## Running this project
+
+1) Clone the repository
+2) `cd` into the project directory:
+   1) Deploy the `co2.bpmn` process definition to your Camunda server
+   2) `cd` into the `task-worker` directory:
+      1) run `go mod tidy` to update the `task-worker` module
+      2) adjust all constant values in the `task-handler.go` file
+      3) run `go run task-handler.go`
+   3) cd into the `arduino-code` directory
+      1) open the `Greenhouse.ino` file in the Arduino IDE
+      2) adjust all constant values in  `Greenhouse.ino`
+      3) deploy the Arduino code to your Arduino board
+3) Have fun!
+
+
 ## Review
 
 If you've been following this (incredibly slow) project, then you've already been through [part 1](https://dzone.com/articles/a-proof-of-concept-for-camunda-platform-bpmn-with) and [part 2](https://dzone.com/articles/camunda-iot-proof-of-concept-part-ii) and have been wondering if part 3 would ever arrive. Well, here it is! This is the part where I pull together all the previous parts and actually deploy a [Camunda](https://camunda.com?ref=davidgsiot) BPMN-powered IoT Greenhouse!
